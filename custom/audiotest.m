@@ -4,7 +4,7 @@
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
-input_audio = fullfile(script_dir, '..', 'files', 'mixkit-short-slap-or-clap-2167.wav');
+input_audio = fullfile(script_dir, '..', 'files', 'sample-5s.mp3');
 packet_file = fullfile(script_dir, 'audio_packets.mat');
 output_audio = fullfile(script_dir, 'audio_received.wav');
 mode = 'loopback'; % 'estimate' only measures; 'encode'/'decode' save and reload signals.
@@ -137,4 +137,4 @@ switch mode
 
     otherwise
         error('mode must be ''encode'' or ''decode''.');
-end
+end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
