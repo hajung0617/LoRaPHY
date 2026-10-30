@@ -4,20 +4,22 @@
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
-input_file = fullfile(script_dir, '..', 'files', 'sample-3s.mp3');
+input_file = fullfile(script_dir, '..', 'files', 'sample-10s.mp3');
 radio_id = 'usb:0'; % Confirm with findPlutoRadio in this MATLAB session.
 rf_freq = 915e6;    % Match the configured Pluto center frequency.
 sf = 7;
 bw = 125e3;
 fs = 1e6;
 tx_gain = -30;       % Gain used by the working text link.
-inter_packet_gap_s = 0.25;
+inter_packet_gap_s = 0.5; % Give the RX software more time between packets.
 
 % LoRaPHY's decoder buffer is limited to 255 bytes including the 2 CRC bytes.
 max_phy_payload_bytes = 253;
 packet_index_bytes = 4;
 packet_count_bytes = 4;
-data_bytes_per_packet = max_phy_payload_bytes - packet_index_bytes - packet_count_bytes;
+file_size_bytes = 4;
+data_bytes_per_packet = max_phy_payload_bytes - packet_index_bytes - ...
+    packet_count_bytes - file_size_bytes;
 
 fid = fopen(input_file, 'rb');
 if fid < 0
@@ -25,6 +27,9 @@ if fid < 0
 end
 file_bytes = fread(fid, inf, '*uint8');
 fclose(fid);
+if numel(file_bytes) > double(intmax('uint32'))
+    error('Input file is too large for the packet header.');
+end
 
 packet_count = ceil(numel(file_bytes) / data_bytes_per_packet);
 phy = LoRaPHY(rf_freq, sf, bw, fs);
@@ -60,6 +65,7 @@ for packet_idx = 1:packet_count
     packet_payload = [ ...
         typecast(uint32(packet_idx), 'uint8')'; ...
         typecast(uint32(packet_count), 'uint8')'; ...
+        typecast(uint32(numel(file_bytes)), 'uint8')'; ...
         chunk(:)];
 
     tx_symbols = phy.encode(packet_payload);
@@ -75,5 +81,29 @@ for packet_idx = 1:packet_count
     fprintf('Transmitted packet %d/%d\n', packet_idx, packet_count);
 end
 
+% Retry only the tail packet; RX ignores duplicates and can recover a missed tail.
+packet_idx = packet_count;
+first = (packet_idx - 1) * data_bytes_per_packet + 1;
+last = min(packet_idx * data_bytes_per_packet, numel(file_bytes));
+chunk = file_bytes(first:last);
+packet_payload = [ ...
+    typecast(uint32(packet_idx), 'uint8')'; ...
+    typecast(uint32(packet_count), 'uint8')'; ...
+    typecast(uint32(numel(file_bytes)), 'uint8')'; ...
+    chunk(:)];
+tail_symbols = phy.encode(packet_payload);
+tail_signal = phy.modulate(tail_symbols);
+tail_frame = complex(zeros(frame_length, 1));
+tail_frame(1:numel(tail_signal)) = tail_signal(:);
+peak = max(abs(tail_frame));
+if peak > 0
+    tail_frame = 0.7 * tail_frame / peak;
+end
+tx(tail_frame);
+fprintf('Retried final packet %d/%d\n', packet_idx, packet_count);
+
+% Give the receiver time to drain the final samples before TX is released.
+tx(complex(zeros(frame_length, 1)));
+pause(frame_length/fs);
 release(tx);
-fprintf('Transmission complete.\n');
+fprintf('Transmission complete; trailing silence sent.\n');
