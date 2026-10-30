@@ -10,7 +10,7 @@ rf_freq = 915e6;    % Match the configured Pluto center frequency.
 sf = 7;
 bw = 125e3;
 fs = 1e6;
-tx_gain = -35;
+tx_gain = -30;       % Gain used by the working text link.
 inter_packet_gap_s = 0.25;
 
 % LoRaPHY's decoder buffer is limited to 255 bytes including the 2 CRC bytes.

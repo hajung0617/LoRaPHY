@@ -11,7 +11,7 @@ sf = 7;
 bw = 125e3;
 fs = 1e6;
 rx_frame_samples = 65536;
-rx_timeout_s = 300;
+rx_timeout_s = 30;   % Stop after 30 seconds without a valid packet.
 
 max_phy_payload_bytes = 253;
 packet_index_bytes = 4;
@@ -58,7 +58,8 @@ while toc(last_packet_time) < rx_timeout_s
     end
 
     try
-        [rx_symbols, ~] = phy.demodulate(rx_buffer);
+        % Hide the expected warning during idle periods.
+        demodulate_output = evalc('[rx_symbols, ~] = phy.demodulate(rx_buffer);'); %#ok<NASGU>
     catch
         % Ignore incomplete or noise-only windows and keep listening.
         rx_symbols = [];
@@ -71,16 +72,20 @@ while toc(last_packet_time) < rx_timeout_s
         continue;
     end
 
-    try
-        [decoded_packets, checksums] = phy.decode(rx_symbols);
-    catch
-        rx_buffer = rx_buffer(end-min(numel(rx_buffer), max_packet_samples)+1:end);
-        continue;
-    end
+    for col = 1:size(rx_symbols, 2)
+        % Decode candidates separately so CRC-disabled noise candidates cannot
+        % misalign the checksum columns or stop the receiver.
+        try
+            [decoded_packet, packet_checksum] = phy.decode(rx_symbols(:, col));
+        catch
+            continue;
+        end
+        if isempty(decoded_packet) || isempty(packet_checksum)
+            continue;
+        end
 
-    for col = 1:size(decoded_packets, 2)
-        decoded = uint8(decoded_packets(:, col));
-        checksum = uint8(checksums(:, min(col, size(checksums, 2))));
+        decoded = uint8(decoded_packet(:, 1));
+        checksum = uint8(packet_checksum(:, 1));
         if numel(decoded) < app_header_bytes + 2 || ...
                 ~isequal(decoded(end-1:end), checksum(:))
             continue;
