@@ -44,7 +44,8 @@ while toc(timer) < listen_seconds
     end
 
     try
-        [rx_symbols, ~] = phy.demodulate(rx_buffer);
+        % demodulate warns on every idle window; capture that expected output.
+        demodulate_output = evalc('[rx_symbols, ~] = phy.demodulate(rx_buffer);'); %#ok<NASGU>
     catch
         rx_symbols = [];
     end
