@@ -6,7 +6,7 @@ addpath(fileparts(script_dir));
 
 input_file = fullfile(script_dir, '..', 'files', 'sample-10s.mp3');
 radio_id = 'usb:0'; % Confirm with findPlutoRadio in this MATLAB session.
-rf_freq = 915e6;    % Match the configured Pluto center frequency.
+rf_freq = 922.1e6;  % KR920-923 default LoRaWAN channel; match RX.
 sf = 7;
 bw = 125e3;
 fs = 1e6;

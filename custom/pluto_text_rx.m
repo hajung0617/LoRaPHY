@@ -5,7 +5,7 @@ script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
 radio_id = 'usb:1';       % Change to the ID reported by findPlutoRadio.
-rf_freq = 915e6;          % Must match the transmitter.
+rf_freq = 922.1e6;        % KR920-923 default LoRaWAN channel; match TX.
 sf = 7;
 bw = 125e3;
 fs = 1e6;
