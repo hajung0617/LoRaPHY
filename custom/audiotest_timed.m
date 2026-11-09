@@ -3,9 +3,12 @@
 
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
 
 input_audio = fullfile(script_dir, '..', 'files', 'sample-3s.mp3');
-output_audio = fullfile(script_dir, 'audio_received_timed.wav');
+output_audio = fullfile(result_dir, ['audio_received_timed_' run_timestamp '.wav']);
 
 rf_freq = 470e6; % Required by the current LoRaPHY constructor; unused by software loopback.
 sf = 7;

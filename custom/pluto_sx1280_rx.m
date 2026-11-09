@@ -13,7 +13,10 @@ fs = 4 * bw;              % 812.5 kS/s; aligns LoRaPHY's discrete chirp samples.
 rx_frame_samples = 65536;
 listen_seconds = 60;
 save_iq = false;
-iq_file = fullfile(script_dir, 'sx1280_rx_capture.mat');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+iq_file = fullfile(result_dir, ['sx1280_rx_capture_' run_timestamp '.mat']);
 
 phy = LoRaPHY(rf_freq, sf, bw, fs);
 phy.has_header = 1;       % Explicit header.

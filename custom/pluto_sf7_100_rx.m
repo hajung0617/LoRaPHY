@@ -16,7 +16,11 @@ start_timeout_s = 180;    % Maximum wait for the first valid packet.
 idle_timeout_s = 10;      % Allow RX/decoder time to drain the final packets.
 buffer_seconds = 2;
 process_interval_s = 0.5;
-result_file = fullfile(script_dir, 'pluto_sf7_100_results.csv');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+result_file = fullfile(result_dir, ...
+    ['pluto_sf7_100_results_' run_timestamp '.csv']);
 
 % Validate the ID in this MATLAB session before starting the listen loop.
 available_radios = findPlutoRadio;

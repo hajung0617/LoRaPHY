@@ -4,7 +4,10 @@
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
-output_file = fullfile(script_dir, 'audio_received.mp3');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+output_file = fullfile(result_dir, ['audio_received_' run_timestamp '.mp3']);
 radio_id = 'usb:1'; % Confirm with findPlutoRadio in this MATLAB session.
 rf_freq = 263e6;  % KR920-923 default LoRaWAN channel; match TX.
 sf = 7;

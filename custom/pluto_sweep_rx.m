@@ -18,7 +18,10 @@ capture_seconds = 360;     % Start TX as soon as RX reports ready.
 capture_dtype = 'single'; % Reduce memory while capturing raw IQ.
 decode_window_s = 4;
 decode_step_s = 2;         % Overlap windows so packets at boundaries are retained.
-result_file = fullfile(script_dir, 'pluto_sweep_results.csv');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+result_file = fullfile(result_dir, ['pluto_sweep_results_' run_timestamp '.csv']);
 
 available_radios = findPlutoRadio;
 available_ids = {available_radios.RadioID};

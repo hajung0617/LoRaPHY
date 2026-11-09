@@ -6,8 +6,11 @@ script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
 input_audio = fullfile(script_dir, '..', 'files', 'sample-3s.mp3');
-result_csv = fullfile(script_dir, 'audio_rate_sweep_results.csv');
-result_mat = fullfile(script_dir, 'audio_rate_sweep_results.mat');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+result_csv = fullfile(result_dir, ['audio_rate_sweep_results_' run_timestamp '.csv']);
+result_mat = fullfile(result_dir, ['audio_rate_sweep_results_' run_timestamp '.mat']);
 
 rf_freq = 470e6; % Required by LoRaPHY constructor; software loopback uses no RF.
 sf_values = 7:12;

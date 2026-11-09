@@ -3,10 +3,13 @@
 
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
 
 input_audio = fullfile(script_dir, '..', 'files', 'sample-3s.mp3');
-packet_file = fullfile(script_dir, 'audio_packets.mat');
-output_audio = fullfile(script_dir, 'audio_received.wav');
+packet_file = fullfile(result_dir, ['audio_packets_' run_timestamp '.mat']);
+output_audio = fullfile(result_dir, ['audio_received_' run_timestamp '.wav']);
 mode = 'loopback'; % 'estimate' only measures; 'encode'/'decode' save and reload signals.
 
 rf_freq = 470e6;
@@ -114,6 +117,13 @@ switch mode
         fprintf('Created %d baseband packets in %s\n', packet_count, packet_file);
 
     case 'decode'
+        packet_files = dir(fullfile(result_dir, 'audio_packets_*.mat'));
+        if isempty(packet_files)
+            error('audiotest:NoPacketFile', ...
+                'No encoded packet file found in %s. Run encode mode first.', result_dir);
+        end
+        [~, newest_idx] = max([packet_files.datenum]);
+        packet_file = fullfile(result_dir, packet_files(newest_idx).name);
         saved = load(packet_file);
         received_bytes = uint8([]);
         for packet_idx = 1:numel(saved.baseband_packets)

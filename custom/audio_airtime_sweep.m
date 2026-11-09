@@ -3,8 +3,11 @@
 
 script_dir = fileparts(mfilename('fullpath'));
 input_audio = fullfile(script_dir, '..', 'files', 'sample-3s.mp3');
-result_csv = fullfile(script_dir, 'audio_airtime_results.csv');
-result_mat = fullfile(script_dir, 'audio_airtime_results.mat');
+result_dir = fullfile(script_dir, 'result');
+if ~exist(result_dir, 'dir'), mkdir(result_dir); end
+run_timestamp = char(datetime('now', 'Format', 'yyMMdd_HHmmss_SSS'));
+result_csv = fullfile(result_dir, ['audio_airtime_results_' run_timestamp '.csv']);
+result_mat = fullfile(result_dir, ['audio_airtime_results_' run_timestamp '.mat']);
 
 sf_values = 7:12;
 cr_values = 1:4;             % CR=1..4 correspond to 4/5..4/8.
