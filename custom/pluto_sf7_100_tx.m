@@ -4,8 +4,8 @@
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
-radio_id = 'usb:0';       % Set from findPlutoRadio on the TX computer.
-rf_freq = 922.1e6;
+radio_id = 'sn:1044739a470b000e17001f00235f7efe51'; % TX Pluto serial number.
+rf_freq = 263e6;
 sf = 7;
 bw = 125e3;
 fs = 1e6;

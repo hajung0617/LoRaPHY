@@ -4,8 +4,8 @@
 script_dir = fileparts(mfilename('fullpath'));
 addpath(fileparts(script_dir));
 
-radio_id = 'usb:1';       % Set from findPlutoRadio on the RX computer.
-rf_freq = 922.1e6;
+radio_id = 'sn:1044739a470b00071c001400d59c7fc707'; % Pluto serial number.
+rf_freq = 263e6;
 sf = 7;
 bw = 125e3;
 fs = 1e6;
@@ -25,16 +25,32 @@ result_file = fullfile(result_dir, ...
 % Validate the ID in this MATLAB session before starting the listen loop.
 available_radios = findPlutoRadio;
 available_ids = {available_radios.RadioID};
-if ~any(strcmp(radio_id, available_ids))
+available_serial_ids = {};
+if isfield(available_radios, 'SerialNum')
+    available_serial_ids = cellfun(@(serial) ['sn:' serial], ...
+        {available_radios.SerialNum}, 'UniformOutput', false);
+end
+radio_visible = any(strcmp(radio_id, available_ids)) || ...
+    any(strcmp(radio_id, available_serial_ids));
+if ~radio_visible
     if isempty(available_ids)
         available_text = '(none)';
     else
-        available_text = strjoin(available_ids, ', ');
+        radio_details = cell(size(available_ids));
+        for radio_idx = 1:numel(available_ids)
+            if numel(available_serial_ids) >= radio_idx
+                radio_details{radio_idx} = sprintf('%s (sn:%s)', ...
+                    available_ids{radio_idx}, available_radios(radio_idx).SerialNum);
+            else
+                radio_details{radio_idx} = available_ids{radio_idx};
+            end
+        end
+        available_text = strjoin(radio_details, ', ');
     end
     error('pluto_sf7_100_rx:RadioNotFound', ...
-        ['RadioID "%s" is not visible in this MATLAB session. ' ...
-        'findPlutoRadio reports: %s. Set radio_id to an available ID, ' ...
-        'or release the radio from the other MATLAB session.'], ...
+        ['RadioID/serial "%s" is not visible in this MATLAB session. ' ...
+        'findPlutoRadio reports: %s. Check the serial number or release ' ...
+        'the radio from the other MATLAB session.'], ...
         radio_id, available_text);
 end
 
