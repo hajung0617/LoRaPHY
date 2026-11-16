@@ -1,0 +1,69 @@
+﻿map_no,osm_id,osm_name,register_name,height_m,height_source,audit_status,outside_DEM_coverage,footprint_m2
+1,172246888,체육관,6동 체육관,10.5,estimated floors,Floor-based estimate,False,2100.8
+2,172246889,북악관,,56.0,estimated floors,Floor-based estimate,False,1580.9
+3,172246892,법학관,,10.0,estimated default,Assumed 10 m,False,2139.1
+4,172246893,성곡도서관,1동 도서관,19.5,register,Register height,False,2663.3
+5,172246894,조형관,2동 4호관 (조형관),18.6,register,Register height,False,3126.5
+6,172536208,,,10.0,estimated default,Assumed 10 m,False,98.4
+7,172536209,콘서트홀,,10.0,estimated default,Assumed 10 m,False,450.7
+8,172646932,,,10.0,estimated default,Assumed 10 m,False,735.8
+9,172646933,과학관,,10.0,estimated default,Assumed 10 m,False,2412.1
+10,172646935,경영관,,10.0,estimated default,Assumed 10 m,False,1306.7
+11,172646936,본부관,본관-5동,14.8,register,Register height,False,2491.2
+12,172646937,종합복지관,종합복지관-25동,19.7,register,Register height,False,2322.7
+13,172646938,예술관,국민대예술관,19.37,register,Register height,False,3383.2
+14,172646941,평생교육실기관,,10.0,estimated default,Assumed 10 m,False,475.7
+15,172918337,공학관,17동 공학관,18.74,register,Register height,False,4492.5
+16,432296240,,,10.0,estimated default,Assumed 10 m,False,1317.7
+17,432296241,,,10.0,estimated default,Assumed 10 m,False,236.1
+18,432296242,,,10.0,estimated default,Assumed 10 m,False,481.6
+19,432296243,생활관,,10.0,estimated default,Assumed 10 m,False,1999.1
+20,432300547,,,10.0,estimated default,Assumed 10 m,False,79.7
+21,432300549,,,10.0,estimated default,Assumed 10 m,False,158.7
+22,469055825,경국사,,10.0,estimated default,Assumed 10 m,False,2787.6
+23,469461993,,,14.0,estimated floors,Floor-based estimate,False,1395.6
+24,469469744,급식실,,10.0,estimated default,Assumed 10 m,False,272.5
+25,469469746,도서관,,10.0,estimated default,Assumed 10 m,False,408.5
+26,469717958,플러스빌,,10.0,estimated default,Assumed 10 m,False,157.1
+27,470221350,산학협력관,,10.0,estimated default,Assumed 10 m,False,1444.3
+28,516900688,드림빌A,,21.0,estimated floors,Floor-based estimate,False,364.6
+29,536167307,국민대학교 정릉생활관,,10.0,estimated default,Assumed 10 m,True,1332.1
+30,548857039,,,10.0,estimated default,Assumed 10 m,False,1925.3
+31,548857040,로얄하이츠 빌라,,10.0,estimated default,Assumed 10 m,False,525.1
+32,548857041,,,10.0,estimated default,Assumed 10 m,False,592.7
+33,548857042,,,10.0,estimated default,Assumed 10 m,False,172.0
+34,548857043,,,10.0,estimated default,Assumed 10 m,False,186.2
+35,548857044,,,10.0,estimated default,Assumed 10 m,False,400.7
+36,548857045,,,10.0,estimated default,Assumed 10 m,False,298.7
+37,548857046,,,10.0,estimated default,Assumed 10 m,False,104.3
+38,548857047,,,10.0,estimated default,Assumed 10 m,False,196.3
+39,548857048,,,10.0,estimated default,Assumed 10 m,False,34.0
+40,548857049,,,10.0,estimated default,Assumed 10 m,False,71.4
+41,548857050,,,10.0,estimated default,Assumed 10 m,False,31.0
+42,548857051,,,10.0,estimated default,Assumed 10 m,False,86.9
+43,548857052,,,10.0,estimated default,Assumed 10 m,False,86.3
+44,548857053,,,10.0,estimated default,Assumed 10 m,False,81.9
+45,548857054,,,10.0,estimated default,Assumed 10 m,False,221.7
+46,548857055,,,10.0,estimated default,Assumed 10 m,False,97.1
+47,548857056,,,10.0,estimated default,Assumed 10 m,False,86.6
+48,548857057,동화바이오관,,10.0,estimated default,Assumed 10 m,False,1132.0
+49,548857058,정보관,,10.0,estimated default,Assumed 10 m,False,1140.2
+50,548857059,정몽구 백신혁신센터,,10.0,estimated default,Assumed 10 m,False,2113.3
+51,548857060,,,10.0,estimated default,Assumed 10 m,False,271.9
+52,548857061,,,10.0,estimated default,Assumed 10 m,False,334.6
+53,548857062,,,10.0,estimated default,Assumed 10 m,False,2178.5
+54,548857063,,,10.0,estimated default,Assumed 10 m,False,386.9
+55,548857064,,,10.0,estimated default,Assumed 10 m,False,154.3
+56,548857065,,,10.0,estimated default,Assumed 10 m,False,85.5
+57,548857066,,,10.0,estimated default,Assumed 10 m,False,199.4
+58,548857067,,,10.0,estimated default,Assumed 10 m,False,160.5
+59,548857068,,,10.0,estimated default,Assumed 10 m,False,606.2
+60,579857196,경상관,,21.0,estimated floors,Floor-based estimate,False,1033.7
+61,579857197,국제관,,21.0,estimated floors,Floor-based estimate,False,1119.9
+62,666414587,글로벌 센터,,10.0,estimated default,Assumed 10 m,False,728.5
+63,672438755,생활관 D,국민대기숙사d동,19.9,register,Register height,False,326.0
+64,672438756,영빈관,16동 영빈관,15.25,register,Register height,False,193.4
+65,672438757,,,10.0,estimated default,Assumed 10 m,False,140.5
+66,1036718272,호림관,,10.0,estimated default,Assumed 10 m,False,1124.4
+67,1472836936,,,53.0,OSM,OSM height,True,456.8
+68,relation_6983647,미래관,,24.5,estimated floors,"Floor-based estimate (7 levels, verify)",False,3105.9

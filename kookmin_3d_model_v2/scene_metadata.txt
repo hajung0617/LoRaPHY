@@ -1,0 +1,11 @@
+CRS: EPSG:5179 (meters)
+Origin projected x,y: 955651.673610, 1956970.793633
+Origin lon,lat: 126.99752200, 37.61109950
+Local XYZ: X=EPSG5179_E-origin_x; Y=EPSG5179_N-origin_y; Z=orthometric_elevation-46.986752
+Native DEM resolution: 90m; display terrain triangulation interval: 30m (interpolated only)
+Raster bounds: 933570.0,1944000.0,956340.0,1972440.0
+DEM edge: outside sampled positions are clamped, NOT measured; see CSV flags
+Scene building vertical walls: constant ground elevation at representative point of footprint; approximations on slopes
+Missing heights estimated from OSM floor count *3.5m or generic 10m.
+CSV buildings with matched OSM labels: 8 / 67 OSM buildings.
+Height unit m. Scene z offset 46.986752 m.

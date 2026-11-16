@@ -1,0 +1,69 @@
+﻿osm_id,osm_name,register_name,height_m,height_source,match_quality,terrain_z_m,outside_DEM_coverage,footprint_m2,x_local_m,y_local_m,base_local_z_m,roof_local_z_m
+172246888,체육관,6동 체육관,10.5,estimated floors,estimated from floor count,115.03,False,2100.8,96.83,0.3,68.04,78.54
+172246889,북악관,,56.0,estimated floors,estimated from floor count,137.73,False,1580.9,-54.71,126.7,90.74,146.74
+172246892,법학관,,10.0,estimated default,assumed 10m (no height/levels),117.59,False,2139.1,60.95,20.27,70.61,80.61
+172246893,성곡도서관,1동 도서관,19.5,register,"semantic building name, verify",119.46,False,2663.3,-340.92,186.77,72.47,91.97
+172246894,조형관,2동 4호관 (조형관),18.6,register,direct name,126.65,False,3126.5,9.6,116.91,79.67,98.27
+172536208,,,10.0,estimated default,assumed 10m (no height/levels),110.1,False,98.4,-50.07,-34.52,63.12,73.12
+172536209,콘서트홀,,10.0,estimated default,assumed 10m (no height/levels),115.21,False,450.7,-23.18,-9.26,68.23,78.23
+172646932,,,10.0,estimated default,assumed 10m (no height/levels),93.71,False,735.8,14.97,-160.35,46.72,56.72
+172646933,과학관,,10.0,estimated default,assumed 10m (no height/levels),112.4,False,2412.1,171.73,54.63,65.41,75.41
+172646935,경영관,,10.0,estimated default,assumed 10m (no height/levels),115.09,False,1306.7,10.41,-35.63,68.1,78.1
+172646936,본부관,본관-5동,14.8,register,equivalent building name,123.5,False,2491.2,-25.93,58.73,76.51,91.31
+172646937,종합복지관,종합복지관-25동,19.7,register,direct name,100.94,False,2322.7,-137.56,-71.09,53.95,73.65
+172646938,예술관,국민대예술관,19.37,register,direct name,104.52,False,3383.2,13.19,-100.43,57.53,76.9
+172646941,평생교육실기관,,10.0,estimated default,assumed 10m (no height/levels),90.65,False,475.7,60.65,-189.2,43.66,53.66
+172918337,공학관,17동 공학관,18.74,register,direct name,116.89,False,4492.5,-326.88,83.88,69.9,88.64
+432296240,,,10.0,estimated default,assumed 10m (no height/levels),83.81,False,1317.7,-43.57,-229.21,36.82,46.82
+432296241,,,10.0,estimated default,assumed 10m (no height/levels),80.46,False,236.1,72.89,-264.46,33.48,43.48
+432296242,,,10.0,estimated default,assumed 10m (no height/levels),77.38,False,481.6,92.24,-286.76,30.39,40.39
+432296243,생활관,,10.0,estimated default,assumed 10m (no height/levels),100.55,False,1999.1,113.02,-121.87,53.57,63.57
+432300547,,,10.0,estimated default,assumed 10m (no height/levels),109.86,False,79.7,-145.24,36.33,62.88,72.88
+432300549,,,10.0,estimated default,assumed 10m (no height/levels),111.2,False,158.7,-99.63,1.76,64.21,74.21
+469055825,경국사,,10.0,estimated default,assumed 10m (no height/levels),102.32,False,2787.6,624.99,394.26,55.33,65.33
+469461993,,,14.0,estimated floors,estimated from floor count,86.61,False,1395.6,356.22,-143.21,39.62,53.62
+469469744,급식실,,10.0,estimated default,assumed 10m (no height/levels),85.09,False,272.5,300.6,-159.79,38.1,48.1
+469469746,도서관,,10.0,estimated default,assumed 10m (no height/levels),79.3,False,408.5,430.9,-148.36,32.31,42.31
+469717958,플러스빌,,10.0,estimated default,assumed 10m (no height/levels),88.54,False,157.1,-174.13,-173.75,41.55,51.55
+470221350,산학협력관,,10.0,estimated default,assumed 10m (no height/levels),120.83,False,1444.3,-363.12,86.43,73.85,83.85
+516900688,드림빌A,,21.0,estimated floors,estimated from floor count,78.17,False,364.6,552.94,-55.44,31.18,52.18
+536167307,국민대학교 정릉생활관,,10.0,estimated default,assumed 10m (no height/levels),77.54,True,1332.1,701.71,39.26,30.55,40.55
+548857039,,,10.0,estimated default,assumed 10m (no height/levels),94.52,False,1925.3,320.59,-77.99,47.53,57.53
+548857040,로얄하이츠 빌라,,10.0,estimated default,assumed 10m (no height/levels),95.82,False,525.1,166.45,-109.82,48.83,58.83
+548857041,,,10.0,estimated default,assumed 10m (no height/levels),88.06,False,592.7,110.93,-205.59,41.07,51.07
+548857042,,,10.0,estimated default,assumed 10m (no height/levels),86.14,False,172.0,146.31,-206.16,39.16,49.16
+548857043,,,10.0,estimated default,assumed 10m (no height/levels),84.2,False,186.2,144.42,-223.05,37.21,47.21
+548857044,,,10.0,estimated default,assumed 10m (no height/levels),81.54,False,400.7,163.89,-241.23,34.55,44.55
+548857045,,,10.0,estimated default,assumed 10m (no height/levels),100.66,False,298.7,165.88,-70.25,53.68,63.68
+548857046,,,10.0,estimated default,assumed 10m (no height/levels),103.3,False,104.3,184.68,-15.27,56.31,66.31
+548857047,,,10.0,estimated default,assumed 10m (no height/levels),101.74,False,196.3,202.27,-19.66,54.75,64.75
+548857048,,,10.0,estimated default,assumed 10m (no height/levels),103.43,False,34.0,207.88,-5.02,56.44,66.44
+548857049,,,10.0,estimated default,assumed 10m (no height/levels),102.75,False,71.4,215.8,-12.02,55.76,65.76
+548857050,,,10.0,estimated default,assumed 10m (no height/levels),100.44,False,31.0,192.12,-31.8,53.45,63.45
+548857051,,,10.0,estimated default,assumed 10m (no height/levels),99.5,False,86.9,197.42,-39.13,52.51,62.51
+548857052,,,10.0,estimated default,assumed 10m (no height/levels),99.66,False,86.3,207.74,-39.17,52.68,62.68
+548857053,,,10.0,estimated default,assumed 10m (no height/levels),100.22,False,81.9,217.83,-35.5,53.24,63.24
+548857054,,,10.0,estimated default,assumed 10m (no height/levels),95.14,False,221.7,223.14,-82.37,48.15,58.15
+548857055,,,10.0,estimated default,assumed 10m (no height/levels),94.08,False,97.1,209.38,-91.96,47.09,57.09
+548857056,,,10.0,estimated default,assumed 10m (no height/levels),93.27,False,86.6,221.58,-99.01,46.28,56.28
+548857057,동화바이오관,,10.0,estimated default,assumed 10m (no height/levels),80.89,False,1132.0,314.36,-214.18,33.9,43.9
+548857058,정보관,,10.0,estimated default,assumed 10m (no height/levels),80.16,False,1140.2,259.44,-243.45,33.17,43.17
+548857059,정몽구 백신혁신센터,,10.0,estimated default,assumed 10m (no height/levels),82.91,False,2113.3,218.3,-210.47,35.93,45.93
+548857060,,,10.0,estimated default,assumed 10m (no height/levels),84.28,False,271.9,421.32,-79.5,37.3,47.3
+548857061,,,10.0,estimated default,assumed 10m (no height/levels),81.84,False,334.6,432.33,-92.1,34.85,44.85
+548857062,,,10.0,estimated default,assumed 10m (no height/levels),72.42,False,2178.5,463.3,-291.33,25.43,35.43
+548857063,,,10.0,estimated default,assumed 10m (no height/levels),70.27,False,386.9,427.72,-355.23,23.28,33.28
+548857064,,,10.0,estimated default,assumed 10m (no height/levels),68.76,False,154.3,447.96,-362.18,21.77,31.77
+548857065,,,10.0,estimated default,assumed 10m (no height/levels),67.49,False,85.5,461.64,-371.12,20.5,30.5
+548857066,,,10.0,estimated default,assumed 10m (no height/levels),64.0,False,199.4,513.44,-366.22,17.01,27.01
+548857067,,,10.0,estimated default,assumed 10m (no height/levels),66.8,False,160.5,494.41,-340.8,19.82,29.82
+548857068,,,10.0,estimated default,assumed 10m (no height/levels),68.71,False,606.2,495.82,-305.22,21.72,31.72
+579857196,경상관,,21.0,estimated floors,estimated from floor count,118.9,False,1033.7,-92.7,45.34,71.91,92.91
+579857197,국제관,,21.0,estimated floors,estimated from floor count,116.36,False,1119.9,-48.87,12.76,69.38,90.38
+666414587,글로벌 센터,,10.0,estimated default,assumed 10m (no height/levels),119.92,False,728.5,-340.7,151.76,72.93,82.93
+672438755,생활관 D,국민대기숙사d동,19.9,register,"semantic building name, verify",110.6,False,326.0,129.77,-19.22,63.61,83.51
+672438756,영빈관,16동 영빈관,15.25,register,direct name,112.56,False,193.4,105.72,-58.51,65.58,80.83
+672438757,,,10.0,estimated default,assumed 10m (no height/levels),107.99,False,140.5,116.12,-75.07,61.01,71.01
+1036718272,호림관,,10.0,estimated default,assumed 10m (no height/levels),78.98,False,1124.4,309.41,-257.66,31.99,41.99
+1472836936,,,53.0,OSM,OSM height,54.94,True,456.8,740.01,-372.48,7.95,60.95
+relation_6983647,미래관,,24.5,estimated floors,OSM relation building:levels=7; 3.5m per floor assumed,91.06,False,3105.9,-44.76,-121.68,44.07,68.57
