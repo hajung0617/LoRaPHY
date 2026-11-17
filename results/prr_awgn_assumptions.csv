@@ -1,0 +1,13 @@
+Parameter,Value
+Model,LoRaPHY full baseband encode/modulate/demodulate/decode with AWGN
+InterferencePower_dBm,-65
+ThermalNoise_dBm,-117.0309
+TotalNoiseFloor_dBm,-65
+SF,7
+Bandwidth_Hz,125000
+CodeRate,4/5
+PayloadBytes,20
+PreambleSymbols,6
+PacketsPerSNR,20
+SNR_Grid_dB,-12 to -4
+RandomSeed,20261117

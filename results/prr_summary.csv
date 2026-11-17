@@ -1,0 +1,5 @@
+NodeType,Frequency_Hz,MeanPRR_percent,MedianPRR_percent
+rooftop,263000000,100,100
+rooftop,922000000,100,100
+indoor_virtual,263000000,100,100
+indoor_virtual,922000000,69.5366881872096,100
