@@ -1,0 +1,77 @@
+NodeID,BuildingName,NodeType,Frequency_Hz,RSS_dBm,RSS_Method,EstimateNeighbors,RaytraceStatus
+RX-172918337-ROOF,공학관,rooftop,263000000,-49.0658334246145,Ray tracing,,Computed
+RX-172918337-ROOF,공학관,rooftop,922000000,-59.9751960998969,Ray tracing,,Computed
+RX-172918337-INDOOR,공학관,indoor_virtual,263000000,-60.1135725949002,Ray tracing,,Computed
+RX-172918337-INDOOR,공학관,indoor_virtual,922000000,-71.3630670076761,Ray tracing,,Computed
+RX-172246889-ROOF,북악관,rooftop,263000000,-47.9909244949347,Ray tracing,,Computed
+RX-172246889-ROOF,북악관,rooftop,922000000,-58.8980161619181,Ray tracing,,Computed
+RX-172246889-INDOOR,북악관,indoor_virtual,263000000,-60.0885581451455,Ray tracing,,Computed
+RX-172246889-INDOOR,북악관,indoor_virtual,922000000,-71.773958826247,Ray tracing,,Computed
+RX-172646936-ROOF,본부관,rooftop,263000000,-46.2291099943527,Ray tracing,,Computed
+RX-172646936-ROOF,본부관,rooftop,922000000,-57.1379316361151,Ray tracing,,Computed
+RX-172646936-INDOOR,본부관,indoor_virtual,263000000,-55.8123856365705,Ray tracing,,Computed
+RX-172646936-INDOOR,본부관,indoor_virtual,922000000,-67.3378040136741,Ray tracing,,Computed
+RX-172646937-ROOF,종합복지관,rooftop,263000000,-36.6066255163245,Ray tracing,,Computed
+RX-172646937-ROOF,종합복지관,rooftop,922000000,-47.5166804123071,Ray tracing,,Computed
+RX-172646937-INDOOR,종합복지관,indoor_virtual,263000000,-25.5145395588674,Ray tracing,,Computed
+RX-172646937-INDOOR,종합복지관,indoor_virtual,922000000,-36.9883959804204,Ray tracing,,Computed
+RX-relation_6983647-ROOF,미래관,rooftop,263000000,-41.5653878753086,Neighbor IDW-3,경영관; 콘서트홀; 종합복지관,No ray returned with configured ray-tracing limits
+RX-relation_6983647-ROOF,미래관,rooftop,922000000,-52.4895658880944,Neighbor IDW-3,경영관; 콘서트홀; 종합복지관,No ray returned with configured ray-tracing limits
+RX-relation_6983647-INDOOR,미래관,indoor_virtual,263000000,-46.7558706023664,Neighbor IDW-3,경영관; 콘서트홀; 종합복지관,No ray returned with configured ray-tracing limits
+RX-relation_6983647-INDOOR,미래관,indoor_virtual,922000000,-58.2207791499581,Neighbor IDW-3,경영관; 콘서트홀; 종합복지관,No ray returned with configured ray-tracing limits
+RX-172646938-ROOF,예술관,rooftop,263000000,-45.4698964004129,Neighbor IDW-3,경영관; 영빈관; 콘서트홀,No ray returned with configured ray-tracing limits
+RX-172646938-ROOF,예술관,rooftop,922000000,-56.4115458593964,Neighbor IDW-3,경영관; 영빈관; 콘서트홀,No ray returned with configured ray-tracing limits
+RX-172646938-INDOOR,예술관,indoor_virtual,263000000,-57.5633006643399,Neighbor IDW-3,경영관; 영빈관; 콘서트홀,No ray returned with configured ray-tracing limits
+RX-172646938-INDOOR,예술관,indoor_virtual,922000000,-68.9964521054302,Neighbor IDW-3,경영관; 영빈관; 콘서트홀,No ray returned with configured ray-tracing limits
+RX-172246888-ROOF,체육관,rooftop,263000000,-49.0168913725815,Ray tracing,,Computed
+RX-172246888-ROOF,체육관,rooftop,922000000,-59.98507799687,Ray tracing,,Computed
+RX-172246888-INDOOR,체육관,indoor_virtual,263000000,-61.1802046700844,Ray tracing,,Computed
+RX-172246888-INDOOR,체육관,indoor_virtual,922000000,-72.6854059236289,Ray tracing,,Computed
+RX-172246892-ROOF,법학관,rooftop,263000000,-47.8042086813348,Ray tracing,,Computed
+RX-172246892-ROOF,법학관,rooftop,922000000,-58.7679542241194,Ray tracing,,Computed
+RX-172246892-INDOOR,법학관,indoor_virtual,263000000,-59.4019693295208,Ray tracing,,Computed
+RX-172246892-INDOOR,법학관,indoor_virtual,922000000,-70.9459672884682,Ray tracing,,Computed
+RX-172646933-ROOF,과학관,rooftop,263000000,-51.0641339835606,Ray tracing,,Computed
+RX-172646933-ROOF,과학관,rooftop,922000000,-62.2418075056671,Ray tracing,,Computed
+RX-172646933-INDOOR,과학관,indoor_virtual,263000000,-63.8074535091521,Ray tracing,,Computed
+RX-172646933-INDOOR,과학관,indoor_virtual,922000000,-75.212236892298,Ray tracing,,Computed
+RX-579857196-ROOF,경상관,rooftop,263000000,-41.1856534702074,Ray tracing,,Computed
+RX-579857196-ROOF,경상관,rooftop,922000000,-52.0965125300176,Ray tracing,,Computed
+RX-579857196-INDOOR,경상관,indoor_virtual,263000000,-50.8562413807441,Ray tracing,,Computed
+RX-579857196-INDOOR,경상관,indoor_virtual,922000000,-62.369719104575,Ray tracing,,Computed
+RX-172646935-ROOF,경영관,rooftop,263000000,-44.4326850098767,Ray tracing,,Computed
+RX-172646935-ROOF,경영관,rooftop,922000000,-55.3683591367465,Ray tracing,,Computed
+RX-172646935-INDOOR,경영관,indoor_virtual,263000000,-55.7920983950073,Ray tracing,,Computed
+RX-172646935-INDOOR,경영관,indoor_virtual,922000000,-67.2796742915504,Ray tracing,,Computed
+RX-172246893-ROOF,성곡도서관,rooftop,263000000,-52.0002890926225,Ray tracing,,Computed
+RX-172246893-ROOF,성곡도서관,rooftop,922000000,-62.9086127028598,Ray tracing,,Computed
+RX-172246893-INDOOR,성곡도서관,indoor_virtual,263000000,-64.8332528676498,Ray tracing,,Computed
+RX-172246893-INDOOR,성곡도서관,indoor_virtual,922000000,-76.1757635868119,Ray tracing,,Computed
+RX-579857197-ROOF,국제관,rooftop,263000000,-41.5558967770239,Ray tracing,,Computed
+RX-579857197-ROOF,국제관,rooftop,922000000,-52.4599146844819,Ray tracing,,Computed
+RX-579857197-INDOOR,국제관,indoor_virtual,263000000,-51.9143148680718,Ray tracing,,Computed
+RX-579857197-INDOOR,국제관,indoor_virtual,922000000,-63.4211197715609,Ray tracing,,Computed
+RX-470221350-ROOF,산학협력관,rooftop,263000000,-50.5676990589075,Ray tracing,,Computed
+RX-470221350-ROOF,산학협력관,rooftop,922000000,-61.4923114949059,Ray tracing,,Computed
+RX-470221350-INDOOR,산학협력관,indoor_virtual,263000000,-62.6357962734442,Ray tracing,,Computed
+RX-470221350-INDOOR,산학협력관,indoor_virtual,922000000,-73.9591079530203,Ray tracing,,Computed
+RX-172246894-ROOF,조형관,rooftop,263000000,-48.1696672072012,Ray tracing,,Computed
+RX-172246894-ROOF,조형관,rooftop,922000000,-59.0871093979345,Ray tracing,,Computed
+RX-172246894-INDOOR,조형관,indoor_virtual,263000000,-58.6797300477996,Ray tracing,,Computed
+RX-172246894-INDOOR,조형관,indoor_virtual,922000000,-70.2541429569634,Ray tracing,,Computed
+RX-432296243-ROOF,생활관,rooftop,263000000,-48.9603540420285,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits
+RX-432296243-ROOF,생활관,rooftop,922000000,-59.924617722977,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits
+RX-432296243-INDOOR,생활관,indoor_virtual,263000000,-61.4681467511938,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits
+RX-432296243-INDOOR,생활관,indoor_virtual,922000000,-72.8556402585674,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits
+RX-172536209-ROOF,콘서트홀,rooftop,263000000,-42.6907646289864,Ray tracing,,Computed
+RX-172536209-ROOF,콘서트홀,rooftop,922000000,-53.6141160925486,Ray tracing,,Computed
+RX-172536209-INDOOR,콘서트홀,indoor_virtual,263000000,-55.5070355661769,Ray tracing,,Computed
+RX-172536209-INDOOR,콘서트홀,indoor_virtual,922000000,-66.9362022470143,Ray tracing,,Computed
+RX-666414587-ROOF,글로벌 센터,rooftop,263000000,-51.310801407336,Ray tracing,,Computed
+RX-666414587-ROOF,글로벌 센터,rooftop,922000000,-62.2241797081458,Ray tracing,,Computed
+RX-666414587-INDOOR,글로벌 센터,indoor_virtual,263000000,-64.8102549953282,Ray tracing,,Computed
+RX-666414587-INDOOR,글로벌 센터,indoor_virtual,922000000,-76.1585623771831,Ray tracing,,Computed
+RX-672438756-ROOF,영빈관,rooftop,263000000,-49.9124667300107,Ray tracing,,Computed
+RX-672438756-ROOF,영빈관,rooftop,922000000,-60.8817399200893,Ray tracing,,Computed
+RX-672438756-INDOOR,영빈관,indoor_virtual,263000000,-62.7626268772942,Ray tracing,,Computed
+RX-672438756-INDOOR,영빈관,indoor_virtual,922000000,-74.0956309110196,Ray tracing,,Computed

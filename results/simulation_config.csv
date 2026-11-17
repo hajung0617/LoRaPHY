@@ -1,0 +1,22 @@
+Parameter,Value
+Frequencies_Hz,263000000;922000000
+SF,7
+Bandwidth_Hz,125000
+CodeRate,4/5
+PayloadBytes,20
+TxPower_dBm,14
+TxGain_dBi,2
+RxGain_dBi,2
+TxHeightAGL_m,1.5
+RxHeightAGL_m,1.5
+IndoorFloorNumber,1
+FloorHeight_m_assumed,3.2
+IndoorAntennaHeightAboveFloor_m,1.5
+NoiseFigure_dB,6
+InterferencePower_dBm,-110
+SystemLoss_dB,0
+BEL_Class_assumed,traditional
+BEL_ProbabilityNotExceeded,0.5
+RayTracing_MaxReflections,3
+RayTracing_MaxDiffractions,1
+PRR_Status,Not computed: no validated SF7/BW125kHz/CR4/5 SNR-PER model
