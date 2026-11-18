@@ -8,6 +8,6 @@ Bandwidth_Hz,125000
 CodeRate,4/5
 PayloadBytes,20
 PreambleSymbols,6
-PacketsPerSNR,20
-SNR_Grid_dB,-12 to -4
+PacketsPerSNR,100
+SNR_Grid_dB,-10 to -4
 RandomSeed,20261117

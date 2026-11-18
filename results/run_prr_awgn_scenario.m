@@ -12,7 +12,7 @@ cfg.noiseFigure_dB = 6;
 cfg.assumedInterferencePower_dBm = -65; % deliberately strong scenario assumption
 cfg.preambleSymbols = 6;                % LoRaPHY.m constructor default
 cfg.randomSeed = 20261117;
-cfg.snrGrid_dB = -12:1:-4;
+cfg.snrGrid_dB = -10:1:-4;
 cfg.packetsPerSNR = 100;                % Monte Carlo packets per curve point
 
 rssFile = fullfile(outDir,"building_rss_values.csv");
@@ -23,7 +23,9 @@ assert(isfile(rssFile) && isfile(nodeFile) && isfile(osmFile), ...
 assert(isfile(fullfile(rootDir,"LoRaPHY.m")),"LoRaPHY.m is missing.");
 
 R = readtable(rssFile,TextType="string");
-nodes = readtable(nodeFile,TextType="string");
+nodeOpts=detectImportOptions(nodeFile,TextType="string");
+nodeOpts=setvartype(nodeOpts,"OSM_ID","string");
+nodes=readtable(nodeFile,nodeOpts);z
 thermalNoise_dBm = -174 + 10*log10(cfg.bandwidthHz) + cfg.noiseFigure_dB;
 totalNoise_dBm = 10*log10(10^(thermalNoise_dBm/10) + ...
     10^(cfg.assumedInterferencePower_dBm/10));
@@ -148,14 +150,22 @@ for ki=1:numel(kinds)
         try, ax.Toolbar.Visible="off"; catch, end
         for ni=1:height(sub)
             ri=find(R.NodeID==sub.NodeID(ni) & R.Frequency_Hz==freqs(fi),1);
-            oi=find(string(osm.ID)==string(sub.OSM_ID(ni)),1);
-            if isempty(ri)||isempty(oi)||~isfinite(R.Estimated_PRR_percent(ri)), continue; end
+            % Prefer the full OSM feature ID (relations may be stored as a
+            % composite ID); fall back to matching individual member ways.
+            osmId=strtrim(string(sub.OSM_ID(ni)));
+            ois=find(strtrim(string(osm.ID))==osmId);
+            if isempty(ois)
+                osmIds=split(osmId,":");
+                ois=find(ismember(strtrim(string(osm.ID)),osmIds));
+            end
+            if isempty(ri)||isempty(ois)||~isfinite(R.Estimated_PRR_percent(ri)), continue; end
             p=R.Estimated_PRR_percent(ri);
             ci=max(1,min(256,round(1+255*(p-prrDisplayLimits(1))/(prrDisplayLimits(2)-prrDisplayLimits(1)))));
-            geoplot(ax,osm.Shape(oi),FaceColor=cmap(ci,:),FaceAlpha=1.0, ...
-                EdgeColor=[0.1 0.1 0.1],LineStyle="-",LineWidth=0.9);
+            for oi=ois(:)'
+                geoplot(ax,osm.Shape(oi),FaceColor=cmap(ci,:),FaceAlpha=1.0, ...
+                    EdgeColor=[0.1 0.1 0.1],LineStyle="-",LineWidth=0.9);
+            end
             name=sub.BuildingName(ni);
-            if R.RSS_Method(ri)~="Ray tracing", name="~"+name; end
             text(ax,sub.Latitude(ni),sub.Longitude(ni),name,FontSize=7, ...
                 Color="k",FontWeight="bold",Interpreter="none");
         end
@@ -175,10 +185,9 @@ end
 cb=colorbar; cb.Layout.Tile="east"; cb.Label.String="Estimated PRR (%)"; cb.Limits=prrDisplayLimits; cb.Ticks=60:2:100;
 exportgraphics(fig,fullfile(outDir,"prr_node_maps.png"),Resolution=300); close(fig);
 
-% Indoor-only comparison for five selected buildings, styled after reference p.37.
+% Indoor-only comparison for four selected buildings, styled after reference p.37.
 selectedBuildings=[ ...
     string(char([hex2dec("C885") hex2dec("D569") hex2dec("BCF5") hex2dec("C9C0") hex2dec("AD00")])); ... % Welfare
-    string(char([hex2dec("BBF8") hex2dec("B798") hex2dec("AD00")])); ... % Mirae
     string(char([hex2dec("BD81") hex2dec("C545") hex2dec("AD00")])); ... % Bugak
     string(char([hex2dec("ACF5") hex2dec("D559") hex2dec("AD00")])); ... % Gonghak
     string(char([hex2dec("ACFC") hex2dec("D559") hex2dec("AD00")]))]; % Gwahak

@@ -2,11 +2,11 @@ NodeID,BuildingName,NodeType,Frequency_Hz,RSS_dBm,RSS_Method,EstimateNeighbors,R
 RX-172918337-ROOF,공학관,rooftop,263000000,-49.0658334246145,Ray tracing,,Computed,-64.999972792229,15.9341393676145,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172918337-ROOF,공학관,rooftop,922000000,-59.9751960998969,Ray tracing,,Computed,-64.999972792229,5.02477669233208,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172918337-INDOOR,공학관,indoor_virtual,263000000,-60.1135725949002,Ray tracing,,Computed,-64.999972792229,4.88640019732878,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172918337-INDOOR,공학관,indoor_virtual,922000000,-71.3630670076761,Ray tracing,,Computed,-64.999972792229,-6.36309421544712,90.922644613822,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172918337-INDOOR,공학관,indoor_virtual,922000000,-71.3630670076761,Ray tracing,,Computed,-64.999972792229,-6.36309421544712,94.0059636300817,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246889-ROOF,북악관,rooftop,263000000,-47.9909244949347,Ray tracing,,Computed,-64.999972792229,17.0090482972943,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246889-ROOF,북악관,rooftop,922000000,-58.8980161619181,Ray tracing,,Computed,-64.999972792229,6.10195663031087,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246889-INDOOR,북악관,indoor_virtual,263000000,-60.0885581451455,Ray tracing,,Computed,-64.999972792229,4.91141464708348,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172246889-INDOOR,북악관,indoor_virtual,922000000,-71.773958826247,Ray tracing,,Computed,-64.999972792229,-6.77398603401802,80.6503491495494,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172246889-INDOOR,북악관,indoor_virtual,922000000,-71.773958826247,Ray tracing,,Computed,-64.999972792229,-6.77398603401802,89.4861536258017,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646936-ROOF,본부관,rooftop,263000000,-46.2291099943527,Ray tracing,,Computed,-64.999972792229,18.7708627978763,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646936-ROOF,본부관,rooftop,922000000,-57.1379316361151,Ray tracing,,Computed,-64.999972792229,7.86204115611388,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646936-INDOOR,본부관,indoor_virtual,263000000,-55.8123856365705,Ray tracing,,Computed,-64.999972792229,9.18758715565848,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
@@ -26,15 +26,15 @@ RX-172646938-INDOOR,예술관,indoor_virtual,922000000,-68.9964521054302,Neighbo
 RX-172246888-ROOF,체육관,rooftop,263000000,-49.0168913725815,Ray tracing,,Computed,-64.999972792229,15.9830814196475,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246888-ROOF,체육관,rooftop,922000000,-59.98507799687,Ray tracing,,Computed,-64.999972792229,5.01489479535898,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246888-INDOOR,체육관,indoor_virtual,263000000,-61.1802046700844,Ray tracing,,Computed,-64.999972792229,3.81976812214457,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172246888-INDOOR,체육관,indoor_virtual,922000000,-72.6854059236289,Ray tracing,,Computed,-64.999972792229,-7.68543313139993,47.5826747440027,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172246888-INDOOR,체육관,indoor_virtual,922000000,-72.6854059236289,Ray tracing,,Computed,-64.999972792229,-7.68543313139993,74.6622036348012,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246892-ROOF,법학관,rooftop,263000000,-47.8042086813348,Ray tracing,,Computed,-64.999972792229,17.1957641108942,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246892-ROOF,법학관,rooftop,922000000,-58.7679542241194,Ray tracing,,Computed,-64.999972792229,6.23201856810957,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246892-INDOOR,법학관,indoor_virtual,263000000,-59.4019693295208,Ray tracing,,Computed,-64.999972792229,5.59800346270817,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172246892-INDOOR,법학관,indoor_virtual,922000000,-70.9459672884682,Ray tracing,,Computed,-64.999972792229,-5.94599449623922,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172246892-INDOOR,법학관,indoor_virtual,922000000,-70.9459672884682,Ray tracing,,Computed,-64.999972792229,-5.94599449623922,98.1080110075216,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646933-ROOF,과학관,rooftop,263000000,-51.0641339835606,Ray tracing,,Computed,-64.999972792229,13.9358388086684,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646933-ROOF,과학관,rooftop,922000000,-62.2418075056671,Ray tracing,,Computed,-64.999972792229,2.75816528656188,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172646933-INDOOR,과학관,indoor_virtual,263000000,-63.8074535091521,Ray tracing,,Computed,-64.999972792229,1.19251928307688,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172646933-INDOOR,과학관,indoor_virtual,922000000,-75.212236892298,Ray tracing,,Computed,-64.999972792229,-10.212264100069,11.8160384989647,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172646933-INDOOR,과학관,indoor_virtual,922000000,-75.212236892298,Ray tracing,,Computed,-64.999972792229,-10.212264100069,0,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-579857196-ROOF,경상관,rooftop,263000000,-41.1856534702074,Ray tracing,,Computed,-64.999972792229,23.8143193220216,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-579857196-ROOF,경상관,rooftop,922000000,-52.0965125300176,Ray tracing,,Computed,-64.999972792229,12.9034602622114,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-579857196-INDOOR,경상관,indoor_virtual,263000000,-50.8562413807441,Ray tracing,,Computed,-64.999972792229,14.1437314114849,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
@@ -54,15 +54,15 @@ RX-579857197-INDOOR,국제관,indoor_virtual,922000000,-63.4211197715609,Ray tra
 RX-470221350-ROOF,산학협력관,rooftop,263000000,-50.5676990589075,Ray tracing,,Computed,-64.999972792229,14.4322737333215,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-470221350-ROOF,산학협력관,rooftop,922000000,-61.4923114949059,Ray tracing,,Computed,-64.999972792229,3.50766129732308,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-470221350-INDOOR,산학협력관,indoor_virtual,263000000,-62.6357962734442,Ray tracing,,Computed,-64.999972792229,2.36417651878477,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-470221350-INDOOR,산학협력관,indoor_virtual,922000000,-73.9591079530203,Ray tracing,,Computed,-64.999972792229,-8.95913516079132,25.4086483920868,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-470221350-INDOOR,산학협력관,indoor_virtual,922000000,-73.9591079530203,Ray tracing,,Computed,-64.999972792229,-8.95913516079132,25.8389177643906,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246894-ROOF,조형관,rooftop,263000000,-48.1696672072012,Ray tracing,,Computed,-64.999972792229,16.8303055850278,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246894-ROOF,조형관,rooftop,922000000,-59.0871093979345,Ray tracing,,Computed,-64.999972792229,5.91286339429448,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172246894-INDOOR,조형관,indoor_virtual,263000000,-58.6797300477996,Ray tracing,,Computed,-64.999972792229,6.32024274442937,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-172246894-INDOOR,조형관,indoor_virtual,922000000,-70.2541429569634,Ray tracing,,Computed,-64.999972792229,-5.25417016473443,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-172246894-INDOOR,조형관,indoor_virtual,922000000,-70.2541429569634,Ray tracing,,Computed,-64.999972792229,-5.25417016473443,99.4916596705311,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-432296243-ROOF,생활관,rooftop,263000000,-48.9603540420285,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits,-64.999972792229,16.0396187502005,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-432296243-ROOF,생활관,rooftop,922000000,-59.924617722977,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits,-64.999972792229,5.07535506925198,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-432296243-INDOOR,생활관,indoor_virtual,263000000,-61.4681467511938,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits,-64.999972792229,3.53182604103517,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-432296243-INDOOR,생활관,indoor_virtual,922000000,-72.8556402585674,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits,-64.999972792229,-7.85566746633843,40.7733013464627,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-432296243-INDOOR,생활관,indoor_virtual,922000000,-72.8556402585674,Neighbor IDW-3,영빈관; 체육관; 경영관,No ray returned with configured ray-tracing limits,-64.999972792229,-7.85566746633843,71.5979856059082,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172536209-ROOF,콘서트홀,rooftop,263000000,-42.6907646289864,Ray tracing,,Computed,-64.999972792229,22.3092081632426,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172536209-ROOF,콘서트홀,rooftop,922000000,-53.6141160925486,Ray tracing,,Computed,-64.999972792229,11.3858566996804,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-172536209-INDOOR,콘서트홀,indoor_virtual,263000000,-55.5070355661769,Ray tracing,,Computed,-64.999972792229,9.49293722605207,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
@@ -74,4 +74,4 @@ RX-666414587-INDOOR,글로벌 센터,indoor_virtual,922000000,-76.1585623771831,
 RX-672438756-ROOF,영빈관,rooftop,263000000,-49.9124667300107,Ray tracing,,Computed,-64.999972792229,15.0875060622183,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-672438756-ROOF,영빈관,rooftop,922000000,-60.8817399200893,Ray tracing,,Computed,-64.999972792229,4.11823287213967,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
 RX-672438756-INDOOR,영빈관,indoor_virtual,263000000,-62.7626268772942,Ray tracing,,Computed,-64.999972792229,2.23734591493477,100,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
-RX-672438756-INDOOR,영빈관,indoor_virtual,922000000,-74.0956309110196,Ray tracing,,Computed,-64.999972792229,-9.09565811879062,24.0434188120938,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
+RX-672438756-INDOOR,영빈관,indoor_virtual,922000000,-74.0956309110196,Ray tracing,,Computed,-64.999972792229,-9.09565811879062,21.8955213866063,LoRaPHY AWGN Monte Carlo; assumed -70 dBm in-band interference
