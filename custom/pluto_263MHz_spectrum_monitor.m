@@ -4,7 +4,7 @@ function pluto_263MHz_spectrum_monitor
 
 cfg.CenterFrequency = 263e6;
 cfg.SampleRate = 4e6;
-cfg.Gain = 30;
+cfg.Gain = 0;
 cfg.FFTSize = 8192;
 cfg.FrameSamples = 65536;
 cfg.ThresholdAboveFloor_dB = 10;
@@ -12,14 +12,15 @@ cfg.LoRaBW = 125e3;
 cfg.WaterfallRows = 300;
 cfg.PlotUpdatePeriod_s = 0.10; % Target 10 GUI refreshes per second.
 cfg.LogPeriod_s = 0.25;       % Keep CSV logging at 4 rows per second.
-cfg.OutputDir = fullfile(pwd,'pluto_monitor_results');
+cfg.OutputDir = fullfile(fileparts(fileparts(mfilename('fullpath'))),'pluto_monitor_results');
 cfg.MaxIQFrames = 0; % 0 disables raw IQ; positive value caps captured frames.
 
 if ~exist(cfg.OutputDir,'dir'), mkdir(cfg.OutputDir); end
-stamp = char(datetime('now','Format','yyyyMMdd_HHmmss'));
-measurementFile = fullfile(cfg.OutputDir,['measurements_' stamp '.csv']);
-eventFile = fullfile(cfg.OutputDir,['events_' stamp '.csv']);
-iqFile = fullfile(cfg.OutputDir,['raw_iq_' stamp '.mat']);
+stamp = char(datetime('now','Format','yyyyMMdd_HHmmss_SSS'));
+freqTag = sprintf('%gMHz_',cfg.CenterFrequency/1e6);
+measurementFile = fullfile(cfg.OutputDir,[freqTag 'measurements_' stamp '.csv']);
+eventFile = fullfile(cfg.OutputDir,[freqTag 'events_' stamp '.csv']);
+iqFile = fullfile(cfg.OutputDir,[freqTag 'raw_iq_' stamp '.mat']);
 
 % ADALM-PLUTO is qualified for 325 MHz to 3.8 GHz. 263 MHz is out of range;
 % extended tuning can work, but is not guaranteed by the manufacturer.

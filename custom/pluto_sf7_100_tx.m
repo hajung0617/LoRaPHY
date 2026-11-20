@@ -12,7 +12,7 @@ fs = 1e6;
 cr = 1;                   % LoRaPHY coding-rate index 1 means 4/5.
 repeat_count = 100;
 gap_s = 0.25;
-tx_gain = -50;
+tx_gain = 0;
 payload_bytes = 16;
 
 phy = LoRaPHY(rf_freq, sf, bw, fs);
