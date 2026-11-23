@@ -1,4 +1,5 @@
-addpath('..');
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+addpath(projectRoot);
 % load complex signal from file
 sig = LoRaPHY.read("./sig.cfile");
 

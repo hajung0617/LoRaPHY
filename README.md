@@ -1,5 +1,25 @@
 # LoRaPHY
 
+## Project layout
+
+- `LoRaPHY.m`: shared LoRa PHY implementation at the project root.
+- `simulation/scenarios/`: campus simulation entry points and map/DEM inspection scripts.
+- `simulation/results/`: simulation tables, maps, and generated figures. The PRR scenario reads prior RSS and node result tables from here.
+- `experiments/sdr/`, `experiments/audio/`, `experiments/firmware/`: radio, audio, and embedded experiments.
+- `experiments/results/sdr/`, `experiments/results/audio/`: generated experiment logs and captures.
+- `data/simulation/raw/`: OSM, DEM, and source building-register data.
+- `data/simulation/processed/`: building-height matching datasets.
+- `data/simulation/models/`: campus GLB/STL scene assets.
+- `data/experiments/audio/`: input audio samples.
+- `docs/`: reference documents and guides.
+- `examples/`: LoRaPHY usage examples.
+
+## Campus simulation entry points
+
+Run `simulation/scenarios/run_kookmin_lora.m` for campus node placement and propagation analysis. Its default stage is `placement`; review the generated node placement before setting `kookminRunStage="analysis"` in the MATLAB base workspace and running it again. Run `simulation/scenarios/run_prr_awgn_scenario.m` after RSS results exist to estimate PRR using the LoRa PHY implementation. Both scripts derive paths from their own file location, so they can be launched from any MATLAB current folder.
+
+The SDR and audio scripts are independent hardware or loopback experiments and may require MATLAB support packages and connected radios.
+
 **LoRaPHY** is a complete MATLAB implementation of [LoRa](https://en.wikipedia.org/wiki/LoRa) physical layer, including baseband modulation, baseband demodulation, encoding and decoding.
 **LoRaPHY** is organized as a single file `LoRaPHY.m` for ease of use (copy it and run everywhere).
 

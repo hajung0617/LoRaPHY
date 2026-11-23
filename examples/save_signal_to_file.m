@@ -1,4 +1,5 @@
-addpath('..');
+projectRoot = fileparts(fileparts(mfilename('fullpath')));
+addpath(projectRoot);
 rf_freq = 470e6;    % carrier frequency, used to correct clock drift
 sf = 7;             % spreading factor
 bw = 125e3;         % bandwidth
